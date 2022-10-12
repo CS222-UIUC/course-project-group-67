@@ -7,15 +7,15 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          welcome to Netflix wrapped
+          welcome to netflix wrapped
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://www.netflix.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          connect your account
+          click here to log in and get started
         </a>
       </header>
     </div>
