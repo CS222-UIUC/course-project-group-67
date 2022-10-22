@@ -1,39 +1,47 @@
-import logo from './netflix.png';
-import './App.css';
-
+import "./App.css";
+// importing components from react-router-dom package
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+  
+// import Home component
+import Home from "./pages/Home";
+// import About component
+import About from "./pages/About";
+// import ContactUs component
+import ContactUs from "./pages/ContactUs";
+  
 function App() {
   return (
-    <div className="App">
-      <div className="block home">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          welcome to netflix wrapped
-        </p>
-        <a
-          className="App-link"
-          href="https://www.netflix.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          click here to log in and get started
-        </a>
-      </header>
-      </div>
-      <div className={"block stats"}>
-        <div className="text">
-        <h1>The Stats</h1>
-        <h2>Let's see your favs and not-so-favs</h2>
-        <br></br>
-        <h3>Hours Watched: 723</h3>
-        <h3>Top TV Show: Jane the Virgin</h3>
-        <h3>Top Movie: Crazy Rich Asians</h3>
-        <h3>Top Genre: Mystery</h3>
-        <h3>All Time Fav: Avengers: Infinity War</h3>
-        </div>
-      </div>
-    </div>
+    <>
+      {/* This is the alias of BrowserRouter i.e. Router */}
+      <Router>
+        <Routes>
+          {/* This route is for home component 
+          with exact path "/", in component props 
+          we passes the imported component*/}
+          <Route path="/" component={Home} />
+          {/* This route is for about component 
+          with exact path "/about", in component 
+          props we passes the imported component*/}
+          <Route path="/about" component={About} />
+            
+          {/* This route is for contactus component
+          with exact path "/contactus", in 
+          component props we passes the imported component*/}
+          <Route path="/contactus" component={ContactUs} />
+            
+          {/* If any route mismatches the upper 
+          route endpoints then, redirect triggers 
+          and redirects app to home component with to="/" */}
+          <Navigate to="/" />
+        </Routes>
+      </Router>
+    </>
   );
 }
-
+    
 export default App;
