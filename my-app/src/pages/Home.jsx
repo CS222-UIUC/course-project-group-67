@@ -41,18 +41,6 @@ const Home = () => {
           </a>
         </header>
         </div>
-        <div className={"block stats"}>
-          <div className="text">
-          <h1>The Stats</h1>
-          <h2>Let's see your favs and not-so-favs</h2>
-          <br></br>
-          <h3>Hours Watched: 723</h3>
-          <h3>Top TV Show: Jane the Virgin</h3>
-          <h3>Top Movie: Crazy Rich Asians</h3>
-          <h3>Top Genre: Mystery</h3>
-          <h3>All Time Fav: Avengers: Infinity War</h3>
-          </div>
-        </div>
       </div>
     </div>
   );
