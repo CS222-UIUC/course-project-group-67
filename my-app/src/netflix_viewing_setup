@@ -1,0 +1,29 @@
+#Import libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+#Enter filepath to viewing activity csv
+df=pd.read_csv('')
+
+#Find date and time when content was viewed
+df[['Date','Time']] = df['Start Time'].str.split(' ',expand = True, n=2)
+
+#Get information on what device content was played on
+df.loc[df['Device Type'].str.contains('Mobile'), 'Device Type'] = 'Mobile'
+df.loc[df['Device Type'].str.contains('TV'), 'Device Type'] = 'TV'
+
+#Find watching data on each individual user
+def time_day_data(df):
+    df['Profile Name'].value_counts()
+    time_in_days = df.groupby(by=['Profile Name'])['Duration'].sum().dt.days
+
+    plt.style.use('fivethirtyeight')
+    fig, ax = plt.subplots(figsize=(10,6))
+    time_in_days.plot(kind='bar')
+    ax.set_ylabel('Total days of Netflix use')
+    ax.set_xlabel('Profile User')
+    ax.set_title('Days spent watching Netflix content specific to each user')
+    plt.show()
+
