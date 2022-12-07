@@ -37,7 +37,9 @@ const Home = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            click here to log in and get started
+            <img style={{width: 1300, height: 383, borderRadius: 8,}} src="https://via.placeholder.com/1300x383"/>
+            <p style={{width: 440, height: 104, fontSize: 140, lineHeight: '100%', textAlign: 'center', color: 'rgba(223.12, 14.88, 14.88, 1)',}}>WRAPPED</p>
+            <p style={{width: 1668, height: 157, fontSize: 100, lineHeight: '100%', textAlign: 'center', color: 'white',}}>Welcome, Anwesha Mishra</p>
           </a>
         </header>
         </div>
