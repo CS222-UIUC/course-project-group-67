@@ -9,6 +9,8 @@ Our project is called Netflix WRAPPED. There are over 223 million Netflix users 
 
 (b) Describes technical architecture 
 
+  Netflix WRAPPED consists of various components such as the frontend, backend, and database. 
+
 (c) Provides reproducible installation instructions 
 
 (d) Group members and their roles
