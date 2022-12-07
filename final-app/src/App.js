@@ -5,6 +5,13 @@ import React, { useState } from "react";
 function App() {
   const [file, setFile] = useState();
   const [array, setArray] = useState([]);
+  const [name, setName] = useState("");
+  const [totalHours, setTotalHours] = useState(0);
+  const [favGenre, setFavGenre] = useState("");
+  const [numMovies, setNumMovies] = useState(0);
+  const [numShows, setNumShows] = useState(0);
+  const [top3Shows, setTop3Shows] = useState([]);
+
 
   const fileReader = new FileReader();
 
@@ -46,6 +53,24 @@ function App() {
   return (
     <div style={{ textAlign: "center" }}>
       <h1>Welcome to Netflix Wrapped</h1>
+      <p>
+        a little bit about how this works:
+      </p>
+      <p>
+        our site takes your netflix watch history and compiles different statistics to help you understand and visualize your watching habits—it even recommends new ideas for your watch list. 
+      </p>
+      <p>
+        to get started, visit the following link, login to your netlix account, scroll to the bottom and click "download all", then upload your file below. happy streaming!
+      </p>
+      <a
+        className="App-link"
+        href="https://www.netflix.com/settings/viewed/NIU4LZZMKBHY5MG7SBBBTMA3XM"
+        target="_blank"
+        rel="noopener noreferrer"
+        >
+        dowload viewing activity here
+      </a>
+      <h1></h1>
       <form>
         <input
           type={"file"}
