@@ -1,17 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState } from "react";
+import Analysis from './Analysis';
 
 function App() {
   const [file, setFile] = useState();
   const [array, setArray] = useState([]);
-  const [name, setName] = useState("");
-  const [totalHours, setTotalHours] = useState(0);
-  const [favGenre, setFavGenre] = useState("");
-  const [numMovies, setNumMovies] = useState(0);
-  const [numShows, setNumShows] = useState(0);
-  const [top3Shows, setTop3Shows] = useState([]);
-
 
   const fileReader = new FileReader();
 
@@ -60,7 +54,7 @@ function App() {
         our site takes your netflix watch history and compiles different statistics to help you understand and visualize your watching habits—it even recommends new ideas for your watch list. 
       </p>
       <p>
-        to get started, visit the following link, login to your netlix account, scroll to the bottom and click "download all", then upload your file below. happy streaming!
+        to get started, visit the following link, login to your netflix account, scroll to the bottom and click "download all", then upload your file below. happy streaming!
       </p>
       <a
         className="App-link"
@@ -109,6 +103,7 @@ function App() {
           ))}
         </tbody>
       </table>
+      <Analysis array={array}></Analysis>
     </div>
   );
 }
