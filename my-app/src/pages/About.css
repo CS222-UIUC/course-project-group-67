@@ -1,0 +1,21 @@
+
+h3 {
+    margin-left: 100px;
+}
+
+h1 {
+    margin-left: 100px;
+    text-align: center;
+    color: #B10510;
+}
+
+h2 {
+    margin-left: 100px;
+    text-align: center;
+}
+
+.block {
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+}

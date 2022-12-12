@@ -8,11 +8,12 @@ Our project is called Netflix WRAPPED. There are over 223 million Netflix users 
 
 (b) Describes technical architecture 
 
-  Netflix WRAPPED consists of various components such as the frontend, backend, and database. It asks the user to input their viewing history csv file, based on that it comes up with visual statistics. Using the database to identify common shows other viewers that had similar viewing history watched to recommend them to the user. 
+Netflix WRAPPED consists of various components such as the frontend, backend, and database. It asks the user to input their viewing history csv file, based on that it comes up with visual statistics. Using the database to identify common shows other viewers that had similar viewing history watched to recommend them to the user. 
 
 (c) Provides reproducible installation instructions 
 
 (d) Group members and their roles
+
 
 Achintya Sanjay - Quiz implementation and backend
 
