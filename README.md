@@ -8,19 +8,18 @@ Our project is called Netflix WRAPPED. There are over 223 million Netflix users 
 
 (b) Describes technical architecture 
 
-Netflix WRAPPED consists of various components such as the frontend, backend, and database. It asks the user to input their viewing history csv file, based on that it comes up with visual statistics. Using the database to identify common shows, other viewers that had similar viewing history were recommended the same shows to the user. 
+Netflix WRAPPED consists of various components such as the frontend with React and data analytics through data parsing. All the computation for analysis is done by behind the scenes Javascript. It asks the user to input their viewing history csv file, based on that it comes up with statistics. Using the database to identify common shows, other viewers that had similar viewing history were recommended the same shows to the user. 
 
 (c) Provides reproducible installation instructions 
 
 To produce installation of the program, all the user needs to do is clone the github and run the application, with the attached Netflix CSV as the input. The application will take the CSV, parse it, analyze it, and create charts for the user to visualize how they've been spending their time on Netflix. 
 
-
 (d) Group members and their roles
 
-Achintya Sanjay - Data parsing and backend
+Achintya Sanjay - Data parsing
 
-Anwesha Mishra - Data statistics and backend
+Anwesha Mishra - Data statistics
 
 Ayushe Nagpal - Front-end react set up and page design
 
-Sneha Mohan - Front-end react and database testing
+Sneha Mohan - Front-end react
