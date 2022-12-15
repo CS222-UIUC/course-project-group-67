@@ -1,39 +1,34 @@
 import {React, useState, useEffect} from 'react'
+import './App.css';
 
 const Analysis = (props) => {
 
-    const [array, setArray] = useState(props.array);
-
-    const [name, setName] = useState("");
-    const [totalMins, setTotalMins] = useState(0);
-    const [numMovies, setNumMovies] = useState(0);
-    const [numShows, setNumShows] = useState(0);
-    const [top3Shows, setTop3Shows] = useState([]);
-    const [favGenre, setFavGenre] = useState("");
-    const [mostDay, setMostDay] = useState("");
-    const [recommendation, setRecommendation] = useState("");
+    console.log(props);
 
 	return (
         <div>
             <div style={{ textAlign: "center" }}>
-                <h1>Hello, {name}</h1>
-                <p>
-                    In your life, you have watched a total of {totalMins} of Netflix.
+                <h1>hello, {props.name}</h1>
+                <p className='ana'>
+                    in 2022, you've watched a total of <b>{props.totalMins}</b> minutes of netflix.
                 </p>
-                <p>
-                    For more perspective, that's {totalMins / 60} hours.
+                <p className='ana'>
+                    for perspective, that's <b>{(props.totalMins/60).toFixed(1)}</b> hours.
                 </p>
-                <p>
-                    Within that time, you watch {numMovies} and {numShows} different TV Shows. Wow! That's a lot!
+                <p className='ana'>
+                    within that time, you saw <b>{props.numMovies}</b> movies and <b>{props.numShows}</b> different tv shows. wow! that's a lot!
                 </p>
-                <p>
-                    You spent the most time watching these 3 shows: {top3Shows}.
+                <p className='ana'>
+                    you spent the most time watching this show: <b>{props.topShow}</b>.
                 </p>
-                <p>
-                    For some reason, you watched the most Netflix on {mostDay}s. {mostDay} got you in your feels?
+                <p className='ana'>
+                    for some reason, you perused netflix the most on <b>{props.mostDOW}s</b> each week. <b>{props.mostDOW}</b> got you in your feels?
                 </p>
-                <p>
-                    Overall, your most commonly watched genre is {favGenre}. Because of this, we recommend {recommendation} for you to watch next. You'll definitely enjoy!
+                <p className='ana'>
+                    you watched the most TV this year on <b>{props.mostDay}</b>. what happened that day???
+                </p>
+                <p className='ana'>
+                    overall, your most frequent genre is <b>{props.favGenre}</b>. because of this, we recommend <b>{props.recommendation}</b> for you to watch next. you'll definitely enjoy!
                 </p>
             </div>
         </div>
